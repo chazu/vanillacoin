@@ -1,0 +1,15 @@
+syntax = "proto3";
+package vanillacoin.vanillacoin;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "vanillacoin/x/vanillacoin/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "vanillacoin/x/vanillacoin/Params";
+  option (gogoproto.equal) = true;
+
+  
+}

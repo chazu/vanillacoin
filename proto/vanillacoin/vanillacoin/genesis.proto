@@ -1,0 +1,17 @@
+syntax = "proto3";
+package vanillacoin.vanillacoin;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "vanillacoin/vanillacoin/params.proto";
+
+option go_package = "vanillacoin/x/vanillacoin/types";
+
+// GenesisState defines the vanillacoin module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
